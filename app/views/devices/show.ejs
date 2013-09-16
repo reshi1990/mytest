@@ -1,0 +1,30 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.devices %>">devices</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Details of device</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Details of device</h1>
+</div>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr><th>allowed</th><td><%= device.allowed %></td></tr>
+
+        <tr><th>note</th><td><%= device.note %></td></tr>
+
+        <tr><th>app_version</th><td><%= device.app_version %></td></tr>
+
+        <tr><th>model</th><td><%= device.model %></td></tr>
+
+        <tr><th>region</th><td><%= device.region %></td></tr>
+    </tbody>
+</table>
+
+<div class="well">
+    <%- link_to('<i class="icon-edit icon-white"></i> Edit', pathTo.edit_device(device), {class: 'btn btn-primary'}) %>
+    <%- link_to('<i class="icon-remove icon-white"></i> Delete', pathTo.device(device), {class: 'btn btn-danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %>
+    or
+    <%- link_to('Back to index', pathTo.devices) %>
+</div>

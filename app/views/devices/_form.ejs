@@ -1,0 +1,36 @@
+<%- errorMessagesFor(device) %>
+<div class="control-group">
+
+   <%- form.label("allowed", false, {class: "control-label"}) %>
+
+   <div class="controls">
+
+       <%- form.checkbox("allowed") %>
+
+   </div>
+
+</div>
+<div class="control-group">
+   <%- form.label("note", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("note") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("app_version", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("app_version") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("model", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("model") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("region", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("region") %>
+   </div>
+</div>
